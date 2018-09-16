@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Ver Retos</title>
+<title>Ver Premio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -67,14 +67,12 @@
       <div class="w3-container w3-card w3-white w3-margin-bottom center">
           <a  href="https://seeklogo.com/vector-logo/168795/colpatria"><img src="https://seeklogo.com/images/C/colpatria-logo-30EE948429-seeklogo.com.png" width="120" height="90" alt="HTML Dog"></a>
           <div class="w3-container">
-            <h2 ><b>Ver Reto: </b></h2>
+            <h2 ><b>Premios: </b></h2>
           </div>
-          {{#each retos}}
+          {{#each premios}}
             <div class="w3-container">
                 <h5 class="w3-opacity"><b>{{this.NOMBRE}}:</b></h5>
               --> Descripcion: {{this.DESCRIPCION}}<br>
-              --> Tipo de reto: {{this.TIPO}}<br>
-              --> Puntos: {{this.PUNTOS}}<br>
             </div>
           {{/each}}
       </div>

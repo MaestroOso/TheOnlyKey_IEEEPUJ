@@ -234,12 +234,19 @@ exports.agregartier = function(request, response){
 }
 
 exports.verreto = function(request, response){
-
   var query = "SELECT NOMBRE, DESCRIPCION, TIPO, PUNTOS FROM RETO";
-
   dbInfo.all(query, function(err, rows){
     response.render('verreto',{
       retos: rows,
+    });
+  });
+}
+
+exports.verpremio = function(request, response){
+  var query = "SELECT NOMBRE, DESCRIPCION FROM PREMIO";
+  dbInfo.all(query, function(err, rows){
+    response.render('verpremio',{
+      premios: rows,
     });
   });
 }

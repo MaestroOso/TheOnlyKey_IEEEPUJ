@@ -49,6 +49,7 @@ app.get('/agregarPremios.html', routes.agregarpremios);
 app.get('/agregarRetos.html', routes.agregarretos);
 app.get('/uploadToDatabase/*', routes.uploadToDatabase);
 app.get('/verReto.html', routes.verreto);
+app.get('/verPremio.html', routes.verpremio);
 app.get('/agregarTier.html', routes.agregartier);
 
 
