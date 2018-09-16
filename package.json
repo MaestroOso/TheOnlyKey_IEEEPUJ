@@ -9,10 +9,12 @@
   "author": "Oscar Castelblanco",
   "license": "ISC",
   "dependencies": {
+    "btoa": "^1.2.1",
     "express": "^4.16.2",
     "hbs": "^4.0.1",
     "morgan": "^1.9.0",
     "serve-favicon": "^2.4.5",
-    "sqlite": "^2.8.0"
+    "sqlite": "^2.8.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }

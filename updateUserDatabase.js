@@ -51,7 +51,7 @@ apiGet(wml_credentials.get("url"),
 
             id_usuario = '190290390'; //Id del usuario a actualizar
             arregloDatos = [1, 1, 4, 1]; //Ultimo grupo de compras del usuario
-			const payload = '{"fields": ["COMPRA 1", "COMPRA 2", "COMPRA 3", "COMPRA 4"], "values": ' + arregloDatos +'}';
+			const payload = '{"fields": ["COMPRA 1", "COMPRA 2", "COMPRA 3", "COMPRA 4"], "values": [' + arregloDatos +']}';
 			const scoring_url = "https://us-south.ml.cloud.ibm.com/v3/wml_instances/672d12e7-4c6c-4433-afeb-eb9bfb411bd9/deployments/dd178df6-cbfe-4edb-b6fd-10b405909cc3/online";
 
             apiPost(scoring_url, wmlToken, payload, function (resp) {
@@ -65,8 +65,8 @@ apiGet(wml_credentials.get("url"),
                 console.log(parsedPostResponse);
 
                 //INSERTAR A LA BASE DE DATOS
-                var queryT = "UPDATE USUARIO SET GRUPO WHERE ID=" + id_usuario;
-                con.query(queryT, function (err, result) {
+                var queryT = "UPDATE USUARIO SET GRUPO WHERE ID=" + id_usuario +";";
+                db.all(queryT, function (err, result) {
                     if (err) throw err;
                     console.log(result.affectedRows + " record(s) updated");
                 });
