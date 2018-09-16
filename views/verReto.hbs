@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>Agregar Retos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-margin-bottom w3-card-4">
+        <div class="w3-display-container">
+          <div class="w3-container">
+            <div class="w3-container">
+              <h4 ><b>Premios:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6 ><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Actualizar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Borrar</b></a></h6>
+            </div>
+            <div class="w3-container">
+              <h4 ><b>Desafios:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Actualizar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Borrar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+
+            </div>
+            <div class="w3-container">
+              <h4 ><b>Tier:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom center">
+          <a  href="https://seeklogo.com/vector-logo/168795/colpatria"><img src="https://seeklogo.com/images/C/colpatria-logo-30EE948429-seeklogo.com.png" width="120" height="90" alt="HTML Dog"></a>
+          <div class="w3-container">
+            <h2 ><b>Ver Reto: </b></h2>
+          </div>
+          {{#each recipeEntries}}
+            <div class="w3-container">
+                <p><a href= 'recipes/{{this.id}}' target="_blank">{{this.id}} {{this.recipe_name}}</a></p>
+                <h5 class="w3-opacity"><b>Nombre:</b></h5><input type="text" name="Nombre">
+            </div>
+          {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

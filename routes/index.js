@@ -94,12 +94,6 @@ function parseURL(request, response){
 
 }
 
-exports.agregarpersonas = function(request, response){
-  response.render('agregarpersonas',{
-    nombre:"nombre",
-  });
-}
-
 /* Route of main.html
   Render the index.hbs with the parameters*/
 exports.main = function (request, response){
@@ -219,4 +213,28 @@ exports.uploadToDatabase = function(request, response){
  	      response.render('uploadToDatabase', {title: 'Success:'});
 		//});
 
+}
+
+exports.agregarpremios = function(request, response){
+  response.render('agregarpremios',{
+    nombre:"nombre",
+  });
+}
+
+exports.agregarretos = function(request, response){
+  response.render('agregarretos',{
+    nombre:"nombre",
+  });
+}
+
+exports.agregartier = function(request, response){
+  response.render('agregartier',{
+    nombre:"nombre",
+  });
+}
+
+exports.verreto = function(request, response){
+  response.render('verreto',{
+    nombre:"nombre",
+  });
 }

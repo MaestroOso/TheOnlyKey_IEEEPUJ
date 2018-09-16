@@ -45,8 +45,11 @@ app.use(logger('dev'));
 
 //routes
 app.get('/main.html', routes.main);
-app.get('/agregarPersonas.html', routes.agregarpersonas);
+app.get('/agregarPremios.html', routes.agregarpremios);
+app.get('/agregarRetos.html', routes.agregarretos);
 app.get('/uploadToDatabase/*', routes.uploadToDatabase);
+app.get('/verReto.html', routes.verreto);
+app.get('/agregarTier.html', routes.agregartier);
 
 
 //start server
