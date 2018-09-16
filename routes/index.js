@@ -234,7 +234,12 @@ exports.agregartier = function(request, response){
 }
 
 exports.verreto = function(request, response){
-  response.render('verreto',{
-    nombre:"nombre",
+
+  var query = "SELECT NOMBRE, DESCRIPCION, TIPO, PUNTOS FROM RETO";
+
+  dbInfo.all(query, function(err, rows){
+    response.render('verreto',{
+      retos: rows,
+    });
   });
 }

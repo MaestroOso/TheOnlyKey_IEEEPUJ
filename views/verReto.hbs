@@ -69,10 +69,12 @@
           <div class="w3-container">
             <h2 ><b>Ver Reto: </b></h2>
           </div>
-          {{#each recipeEntries}}
+          {{#each retos}}
             <div class="w3-container">
-                <p><a href= 'recipes/{{this.id}}' target="_blank">{{this.id}} {{this.recipe_name}}</a></p>
-                <h5 class="w3-opacity"><b>Nombre:</b></h5><input type="text" name="Nombre">
+                <h5 class="w3-opacity"><b>{{this.NOMBRE}}:</b></h5>
+              --> Descripcion: {{this.DESCRIPCION}}<br>
+              --> Tipo de reto: {{this.TIPO}}<br>
+              --> Puntos: {{this.PUNTOS}}<br>
             </div>
           {{/each}}
       </div>
