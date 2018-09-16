@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>ColPass</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#id1{
+  color: green;
+}
+#idr1{
+  text-decoration:line-through;
+}
+* {box-sizing: border-box}
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+</style>
+
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <br><h2>Hola, {{nombre}}</h2>
+        </div>
+        <div class="w3-container">
+          <p><strong>Tier: {{tier}}<strong></p>
+          <p>Puntos de Fidelidad: {{puntosT}}</p>
+          <p>Puntos Actuales: {{puntosA}}</p>
+          <p>Puntos para el Siguiente Tier: {{puntosST}}</p>
+          <hr>
+          <p class="w3-large"><b>Desafios del mes: </b></p>
+          <div class="w3-light-grey w3-round-xlarge w3-small">
+            <div class="w3-round-xlarge w3-teal" style="height:24px;width:{{retosCumplidos}}%"></div>
+            </div>
+            <p>
+              <table>
+                  <tr>
+                      <td><h4 id="id{{cumplidoM1}}">{{desafioM1}}</h4></td>
+                      <td><h4 id="id{{cumplidoM2}}">{{desafioM2}}</h4></td>
+                  </tr>
+                  <tr>
+                      <td id="idr{{cumplidoM1}}">{{desafioM1_DES}}</td>
+                      <td id="idr{{cumplidoM2}}">{{desafioM2_DES}}</td>
+                  </tr>
+                  <tr>
+                      <td><h4 id="id{{cumplidoM3}}">{{desafioM3}}</h4></td>
+                      <td><h4 id="id{{cumplidoM4}}">{{desafioM4}}</h4></td>
+                  </tr>
+                  <tr>
+                      <td id="idr{{cumplidoM3}}">{{desafioM3_DES}}</td>
+                      <td id="idr{{cumplidoM4}}">{{desafioM4_DES}}</td>
+                  </tr>
+               </table>
+            </p>
+          <hr>
+          <p class="w3-large w3-text-theme"><b>Desafio Semanal</b></p>
+          <p><h4>{{desafiosS}}</h4></p>
+          <p>{{desafiosS_DES}}</p>
+          </div>
+      </div><br>
+    </div>
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <img src="https://seeklogo.com/images/C/colpatria-logo-30EE948429-seeklogo.com.png" width="120" height="90" alt="HTML Dog" align="middle" title="buzz hover text"></a>
+          <div align="right" style='color:red'>Multplicador: x{{Multiplicador}}</div>
+        <h2 class="w3-text-grey w3-padding-16">Premios Por  Tiers</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Tier 1</b></h5>
+          <img src="{{premio_1}}" width="300" height="200" alt="Premio1" align="middle" title="{{desafioM1_DES}}"></a>
+          <img src="{{premio_2}}" width="300" height="200" alt="Premio2" align="middle" title="{{desafioM2_DES}}"></a>
+          <h6 class="w3-text-teal">{{pTier1_1}}{{pTier1_2}}</span></h6>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Tier 2</b></h5>
+          <img src="{{premio_3}}" width="300" height="200" alt="Premio3" align="middle" title="{{desafioM3_DES}}"></a>
+          <img src="{{premio_4}}" width="300" height="200" alt="Premio4" align="middle" title="{{desafioM4_DES}}"></a>
+          <h6 class="w3-text-teal">{{pTier2_1}}{{pTier2_2}}</span></h6>
+        </div>
+
+        <p><a href="XXXX" target="_blank">Ayuda</a></p>
+      </footer>
+    <!-- End Right Column -->
+    </div>
+
+  <!-- End Grid -->
+  </div>
+
+  <!-- End Page Container -->
+</div>
+
+
+</body>
+</html>

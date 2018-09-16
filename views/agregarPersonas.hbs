@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title>Agregar Premios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+function processPremio(){
+  var tier = "", grupo = "", nombre="", descripcion="", proveedor="", cantidad="";
+  tier = document.getElementById("Tier").value;
+  console.log("Tier: " + tier);
+  grupo = document.getElementById("Grupo").value;
+  console.log("Grupo: " + grupo);
+  nombre = document.getElementById("Nombre").value;
+  console.log("Nombre: " + nombre);
+  descripcion = document.getElementById("Descripcion").value;
+  console.log("Descripcion: " + descripcion);
+  proveedor = document.getElementById("Proveedor").value;
+  console.log("Proveedor: " + proveedor);
+  cantidad = document.getElementById("Cantidad").value;
+  console.log("Cantidad: " + cantidad);
+
+  /** Enviar info a la base de datos **/
+  var win = window.open("localhost:3000/uploadToDatabase"+
+  tier+","+grupo
+  ".html", '_blank');
+
+  //alert("Information Sent Successful");
+  document.getElementById("Tier").value = "1";
+  document.getElementById("Grupo").value = "0";
+  document.getElementById("Nombre").value = "";
+  document.getElementById("Descripcion").value = "";
+  document.getElementById("Proveedor").value = "0";
+  document.getElementById("Cantidad").value = "";
+}
+</script>
+<body class="w3-light-grey">
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <!-- Left Column -->
+    <div class="w3-third">
+      <div class="w3-white w3-text-grey w3-margin-bottom w3-card-4">
+        <div class="w3-display-container">
+          <div class="w3-container">
+            <div class="w3-container">
+              <h4 ><b>Premios:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6 ><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Actualizar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Borrar</b></a></h6>
+            </div>
+            <div class="w3-container">
+              <h4 ><b>Desafios:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Actualizar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Borrar</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+
+            </div>
+            <div class="w3-container">
+              <h4 ><b>Tier:</b></h4>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Crear</b></a></h6>
+            </div>
+            <div class="w3-container w3-opacity">
+              <h6><a href=""><b>Ver</b></a></h6>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="w3-twothird">
+      <div class="w3-container w3-card w3-white w3-margin-bottom center">
+          <a  href="https://seeklogo.com/vector-logo/168795/colpatria"><img src="https://seeklogo.com/images/C/colpatria-logo-30EE948429-seeklogo.com.png" width="120" height="90" alt="HTML Dog"></a>
+          <div class="w3-container">
+            <h2 ><b>Agregar Premios: </b></h2>
+          </div>
+        <h5 class="w3-opacity"><b>Tier</b></h5>
+          <select name="Tier" id="Tier">
+          <option value="1">Tier 1</option>
+          <option value="2">Tier 2</option>
+          <option value="3">Tier 3</option>
+          <option value="4">Tier 4</option>
+          </select>
+          <div class="w3-display-container">
+          </div>
+        <h5 class="w3-opacity"><b>Grupo</b></h5>
+          <select name="Grupo" id="Grupo">
+          <option class="w3-opacity" value="0">0. Nada</option>
+          <option class="w3-opacity" value="1">1. Viajes</option>
+          <option class="w3-opacity" value="2">2. Comida</option>
+          <option class="w3-opacity" value="3">3. Tecnologia</option>
+          <option class="w3-opacity" value="4">4. Deportes</option>
+          <option class="w3-opacity" value="5">5. Hoger</option>
+          </select>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Nombre</b></h5><input type="text" name="Nombre" id="Nombre">
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Descripcion</b></h5><input type="text" name="Descripcion" id = "Descripcion">
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Proveedor</b></h5>
+          <select name="Proveedor" id = "Proveedor">
+          <option class="w3-opacity" value="0">Linio</option>
+          <option class="w3-opacity" value="1">Cencosud</option>
+          <option class="w3-opacity" value="2">Price Smart</option>
+          <option class="w3-opacity" value="3">Mercacentro</option>
+          </select>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Cantidad</b></h5><input type="text" name="Cantidad" id="Cantidad">
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><button type="button" onclick="processPremio()">Enviar</button></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
